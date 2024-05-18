@@ -5,23 +5,24 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Clinica Pega Visão</title>
-    <link rel="shortcut icon" href="{% static './images/icone.ico" type="image/x-icon'%}" />
-    <link href="{% static 'https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css' %}" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous" />
+    <link rel="shortcut icon" href="{% static './images/icone.ico' %}" type="image/x-icon" />
+    {% load bootstrap5 %}
+    {% bootstrap_css %}
+    {% bootstrap_javascript %}
   </head>
 
   <body class="bg-light">
     <!-- Header -->
     <nav class="navbar navbar-expand-md bg-body-tertiary p-0">
       <div class="container-fluid text-dark bg-white">
-        <a class="navbar-brand" href="index.html"><img src="{% static './images/logoPV.jpg'%}" alt srcset /></a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <a class="navbar-brand" href="index.html"><img src="{% static './images/logoPV.jpg' %}" alt srcset /></a>
+        <div class="navbar-collapse container" id="navbarSupportedContent">
           <ul class="navbar-nav me-auto mb-2 mb-lg-0">
             <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="./sobre.html">Sobre</a>
+              <a class=" text-dark nav-link" aria-current="page" href="./sobre.html">Sobre</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">Serviços</a>
+              <a class="text-dark nav-link" href="#">Serviços</a>
             </li>
           </ul>
           <button class="btn btn-outline-info" type="button" data-bs-toggle="modal" data-bs-target="#exampleModal">Entre aqui</button>
@@ -58,7 +59,7 @@
       </div>
     </nav>
     <!-- Banner -->
-    <img src="{% static './images/banner1.png'%}" class="img-fluid w-100" alt="..." />
+    <img src="{% static './images/banner1.png' %}" class="img-fluid w-100" alt="..." />
     <!-- Atendimento -->
     <div class="container text-center pt-3 pb-3">
       <h3>Atendimento Oftalmológico</h3>
@@ -66,35 +67,35 @@
       <!-- Cards -->
       <div class="row gap-3">
         <div class="card col p-0" style="width: 18rem">
-          <img src="{% static './images/catarata.jpg'%}" class="card-img-top card-img-bottom" alt="..." />
+          <img src="{% static './images/catarata.jpg' %}" class="card-img-top card-img-bottom" alt="..." />
           <div class="card-body">
             <h5 class="card-title">Catarata</h5>
             <a href="#" class="btn btn-info">Saiba Mais</a>
           </div>
         </div>
         <div class="card col p-0" style="width: 18rem">
-          <img src="{% static './images/ceratocone.jpg'%}" class="card-img-top card-img-bottom" alt="..." />
+          <img src="{% static './images/ceratocone.jpg' %}" class="card-img-top card-img-bottom" alt="..." />
           <div class="card-body">
             <h5 class="card-title">Ceratocone</h5>
             <a href="#" class="btn btn-info">Saiba Mais</a>
           </div>
         </div>
         <div class="card col p-0" style="width: 18rem">
-          <img src="{% static './images/cirurgia_refrativa.jpg'%}" class="card-img-top card-img-bottom" alt="..." />
+          <img src="{% static './images/cirurgia_refrativa.jpg' %}" class="card-img-top card-img-bottom" alt="..." />
           <div class="card-body">
             <h5 class="card-title">Cirurgia Refrativa</h5>
             <a href="#" class="btn btn-info">Saiba Mais</a>
           </div>
         </div>
         <div class="card col p-0" style="width: 18rem">
-          <img src="{% static './images/cornea_e_conjutiva.jpg'%}" class="card-img-top card-img-bottom" alt="..." />
+          <img src="{% static './images/cornea_e_conjutiva.jpg' %}" class="card-img-top card-img-bottom" alt="..." />
           <div class="card-body">
             <h5 class="card-title">Cornea e Conjutiva</h5>
             <a href="#" class="btn btn-info">Saiba Mais</a>
           </div>
         </div>
         <div class="card col p-0" style="width: 18rem">
-          <img src="{% static './images/glaucoma.jpg'%}" class="card-img-top card-img-bottom" alt="..." />
+          <img src="{% static './images/glaucoma.jpg' %}" class="card-img-top card-img-bottom" alt="..." />
           <div class="card-body">
             <h5 class="card-title">Glaucoma</h5>
             <a href="#" class="btn btn-info">Saiba Mais</a>
@@ -104,21 +105,21 @@
       <br />
       <div class="row gap-3">
         <div class="card col p-0" style="width: 18rem">
-          <img src="{% static './images/lente_de_contato.jpg'%}" class="card-img-top card-img-bottom" alt="..." />
+          <img src="{% static './images/lente_de_contato.jpg' %}" class="card-img-top card-img-bottom" alt="..." />
           <div class="card-body">
             <h5 class="card-title">Lente de Contato</h5>
             <a href="#" class="btn btn-info">Saiba Mais</a>
           </div>
         </div>
         <div class="card col p-0" style="width: 18rem">
-          <img src="{% static './images/lente_intraocular_premium.jpg'%}" class="card-img-top card-img-bottom" alt="..." />
+          <img src="{% static './images/lente_intraocular_premium.jpg' %}" class="card-img-top card-img-bottom" alt="..." />
           <div class="card-body">
             <h5 class="card-title">Lentes Intraocular</h5>
             <a href="#" class="btn btn-info">Saiba Mais</a>
           </div>
         </div>
         <div class="card col p-0" style="width: 18rem">
-          <img src="{% static './images/oftalmologia_geral.jpg'%}" class="card-img-top card-img-bottom" alt="..." />
+          <img src="{% static './images/oftalmologia_geral.jpg' %}" class="card-img-top card-img-bottom" alt="..." />
           <div class="card-body">
             <h5 class="card-title">Oftalmologia Geral</h5>
             <p class="card-text">
@@ -127,14 +128,14 @@
           </div>
         </div>
         <div class="card col p-0" style="width: 18rem">
-          <img src="{% static './images/oftalmopediatria.jpg'%}" class="card-img-top card-img-bottom" alt="..." />
+          <img src="{% static './images/oftalmopediatria.jpg' %}" class="card-img-top card-img-bottom" alt="..." />
           <div class="card-body">
             <h5 class="card-title">Oftalmopediatria</h5>
             <a href="#" class="btn btn-info">Saiba Mais</a>
           </div>
         </div>
         <div class="card col p-0" style="width: 18rem">
-          <img src="{% static './images/plastica_ocular.jpg'%}" class="card-img-top card-img-bottom" alt="..." />
+          <img src="{% static './images/plastica_ocular.jpg' %}" class="card-img-top card-img-bottom" alt="..." />
           <div class="card-body">
             <h5 class="card-title">Plastica Ocular</h5>
             <a href="#" class="btn btn-info">Saiba Mais</a>
@@ -146,7 +147,7 @@
     <div class="card mb-3 container-fluid" style="max-width: 1320px">
       <div class="row g-0">
         <div class="col-md-1 pt-3">
-          <img src="{% static './images/icone_consulta.jpg'%}" class="img-fluid rounded-start" alt="..." />
+          <img src="{% static './images/icone_consulta.jpg' %}" class="img-fluid rounded-start" alt="..." />
         </div>
         <div class="col-md-6">
           <div class="card-body">
@@ -162,7 +163,7 @@
         <div class="col-md-5 align-self-center">
           <div class="card-body text-center">
             <a href="#" class="btn btn-success w-50">
-              <img src="{% static './images/whatsapp.png'%}" class="img-fluid w-25 p-1" />
+              <img src="{% static './images/whatsapp.png' %}" class="img-fluid w-25 p-1" />
               Fale no Whatsapp
             </a>
           </div>
@@ -173,7 +174,7 @@
     <div class="card mb-3 container-fluid" style="max-width: 1320px">
       <div class="row g-0">
         <div class="col-md-4">
-          <img src="{% static './images/clinica.jpg'%}" class="img-fluid rounded-start" alt="..." />
+          <img src="{% static './images/clinica.jpg' %}" class="img-fluid rounded-start" alt="..." />
         </div>
         <div class="col-md-8">
           <div class="card-body">
@@ -193,22 +194,22 @@
       <p class="text-center">No Clínica Pega Visão, prezamos pela conveniência de nossos pacientes, por isso trabalhamos com os principais convênios e seguros de saúde. Clique no botão abaixo e consulte a lista completa dos convênios que aceitamos.</p>
       <div class="row bg-white">
         <div class="col-6 col-md-2 p-2">
-          <img src="{% static './images/bradesco_saude.png'%}" class="img-fluid" alt="..." />
+          <img src="{% static './images/bradesco_saude.png' %}" class="img-fluid" alt="..." />
         </div>
         <div class="col-6 col-md-2 p-2">
-          <img src="{% static './images/itau_porto.png'%}" class="img-fluid" alt="..." />
+          <img src="{% static './images/itau_porto.png' %}" class="img-fluid" alt="..." />
         </div>
         <div class="col-6 col-md-2 p-2">
-          <img src="{% static './images/unimed.png'%}" class="img-fluid" alt="..." />
+          <img src="{% static './images/unimed.png' %}" class="img-fluid" alt="..." />
         </div>
         <div class="col-6 col-md-2 p-2">
-          <img src="{% static './images/sulamerica_saude.png'%}" class="img-fluid" alt="..." />
+          <img src="{% static './images/sulamerica_saude.png' %}" class="img-fluid" alt="..." />
         </div>
         <div class="text-center col-6 col-md-2 p-2">
-          <img src="{% static './images/portoseguro.png'%}" class="img-fluid" alt="..." />
+          <img src="{% static './images/portoseguro.png' %}" class="img-fluid" alt="..." />
         </div>
         <div class="text-center col-6 col-md-2 p-2">
-          <img src="{% static './images/unafisco.jpg'%}" class="img-fluid" alt="..." />
+          <img src="{% static './images/unafisco.jpg' %}" class="img-fluid" alt="..." />
         </div>
       </div>
     </div>
@@ -264,7 +265,5 @@
         </div>
       </footer>
     </div>
-
-    <script src="{% static 'https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
   </body>
 </html>

@@ -1,0 +1,117 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Clinica Pega Visão</title>
+    <link rel="shortcut icon" href="{% static './images/icone.ico' %}" type="image/x-icon" />
+    {% load bootstrap5 %}
+    {% bootstrap_css %}
+    {% bootstrap_javascript %}
+  </head>
+
+  <body class="bg-light">
+    <!-- Header -->
+    <nav class="navbar navbar-expand-md bg-body-tertiary p-0">
+      <div class="container-fluid text-dark bg-white">
+        <a class="navbar-brand" href="{% url 'index' %}"><img src="{% static './images/logoPV.jpg' %}" alt srcset /></a>
+        <div class="navbar-collapse container" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="text-dark nav-link" aria-current="page" href="{% url 'sobre' %}">Sobre</a>
+            </li>
+            <li class="nav-item">
+              <a class="text-dark nav-link" href="#">Serviços</a>
+            </li>
+          </ul>
+          <button class="btn btn-outline-info" type="button" data-bs-toggle="modal" data-bs-target="#exampleModal">Entre aqui</button>
+          <!-- Modal -->
+          <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h1 class="modal-title fs-5" id="exampleModalLabel">Login</h1>
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                  <div class="mb-3 row">
+                    <label for="inputEmail" class="col-sm-2 col-form-label">Email</label>
+                    <div class="col-sm-10">
+                      <input type="email" class="form-control" id="inputEmail" />
+                    </div>
+                  </div>
+                  <div class="mb-3 row">
+                    <label for="inputPassword" class="col-sm-2 col-form-label">Senha</label>
+                    <div class="col-sm-10">
+                      <input type="password" class="form-control" id="inputPassword" />
+                    </div>
+                  </div>
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-secondary" data-bs-dismiss="modal"><a href="{% url 'cadastro' %}" style="text-decoration: none; color: #FFF;">Registrar-se</a></button>
+                  <button type="button" class="btn btn-info">Login</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </nav>
+    {% block content %}
+
+    {% endblock %}
+    <!-- Footer -->
+    <div class="container">
+      <footer id="footer" class="py-3">
+        <div class="row">
+          <div class="col-6 col-md-2 mb-3">
+            <h5>Nosso Endereço:</h5>
+            <ul class="nav flex-column">
+              <li class="nav-item mb-2">
+                <p class="p-0 m-0 text-body-secondary">
+                  Av. Pega Visão, 011 – Mooca, São Paulo – SP, 00000-000 <br />
+                  CNPJ: 00.000.000/0000-00
+                </p>
+              </li>
+            </ul>
+          </div>
+
+          <div class="col-6 col-md-4 mb-3">
+            <h5>Contatos:</h5>
+            <ul class="nav flex-column">
+              <li class="nav-item mb-2">
+                <p class="p-0 m-0 text-body-secondary">E-mail: cpv@pegavisao.com.br</p>
+              </li>
+              <li class="nav-item mb-2">
+                <p class="p-0 m-0 text-body-secondary">TEL: (00) 0000-0000</p>
+              </li>
+              <li class="nav-item mb-2">
+                <p class="p-0 m-0 text-body-secondary">Fale conosco</p>
+              </li>
+              <li class="nav-item mb-2">
+                <p class="p-0 m-0 text-body-secondary">WhatsApp: (00) 00000-0000</p>
+              </li>
+            </ul>
+          </div>
+
+          <div class="col-md-5 offset-md-1 mb-3">
+            <form>
+              <h5>Se inscreva na nossa newsletter!</h5>
+              <p>Receba novidades em primeira mão!</p>
+              <div class="d-flex flex-column flex-sm-row w-100 gap-2">
+                <label for="newsletter1" class="visually-hidden">Email Address</label>
+                <input id="newsletter1" type="text" class="form-control" placeholder="E-mail" />
+                <button class="btn btn-primary" type="button">Confirmar</button>
+              </div>
+            </form>
+          </div>
+        </div>
+
+        <div class="d-flex flex-column flex-sm-row justify-content-between py-4 my-4 border-top">
+          <p class="container text-center">© 2024 - Clínica Pega Visão - Todos os direitos reservados - Desenvolvido por Enzo, Fabio e Leandro</p>
+        </div>
+      </footer>
+    </div>
+  </body>
+</html>

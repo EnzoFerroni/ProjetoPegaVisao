@@ -1,0 +1,104 @@
+{% extends 'clinica/base.html' %}
+{% load static %}
+{% block content %}
+  <!-- Banner -->
+  <img src="{% static './images/quemsomos.png' %}" class="img-fluid w-100" alt="..." />
+  <!-- Nossa Estrutura -->
+  <div class="container py-4">
+    <div class="row row-gap-1">
+      <div class="col-6">
+        <h2>Nossa Estrutura</h2>
+        <br />
+        <p>A Clínica Pega Visão, é referência no tratamento oftalmológico. Localiza-se na cidade de São Paulo, é formada por uma equipe de profissionais altamente qualificados e devidamente credenciados junto às sociedades e instituições de classe nacionais e internacionais.</p>
+      </div>
+      <div class="col-2">
+        <img src="{% static './images/imagem1.png' %}" alt="" />
+      </div>
+      <div class="col-2">
+        <img src="{% static './images/imagem2.png' %}" alt="" />
+      </div>
+      <div class="col-2">
+        <img src="{% static './images/imagem3.png' %}" alt="" />
+      </div>
+      <div class="col-6">
+        <p>Dispõe das condições ideais para atender com excelência o público, desde a infância até a terceira idade. Por manter convênios com diversos planos de saúde pode realizar um atendimento amplo e diversificado à população.</p>
+      </div>
+      <div class="col-2">
+        <img src="{% static './images/imagem4.png' %}" alt="" />
+      </div>
+      <div class="col-2">
+        <img src="{% static './images/imagem5.png' %}" alt="" />
+      </div>
+      <div class="col-2">
+        <img src="{% static './images/imagem6.png' %}" alt="" />
+      </div>
+      <div class="col-6">
+        <img src="" alt="" />
+      </div>
+      <div class="col-2">
+        <img src="{% static './images/imagem7.png' %}" alt="" />
+      </div>
+      <div class="col-2">
+        <img src="{% static './images/imagem8.png' %}" alt="" />
+      </div>
+      <div class="col-2">
+        <img src="{% static './images/imagem9.png' %}" alt="" />
+      </div>
+    </div>
+  </div>
+  <!-- Responsabilidade Social -->
+  <div class="pb-2 border-top text-center py-4">
+    <h2>Responsabilidade Social</h2>
+  </div>
+  <div class="card mb-3 container-fluid" style="max-width: 1320px">
+    <div class="row g-0">
+      <div class="col-md-4">
+        <img src="{% static './images/imagem1-responsa.png' %}" class="img-fluid rounded-start" alt="..." />
+      </div>
+      <div class="col-md-8">
+        <div class="card-body">
+          <h5 class="card-title">Projeto Nossas Crianças ABRINQ</h5>
+          <p class="card-text">Desde 1998, a Clínica Pega Visão, por meio de um convênio de cooperação com a Fundação Abrinq, realiza o atendimento oftalmológico das crianças e adolescentes assistidos pela ONG.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="card mb-3 container-fluid" style="max-width: 1320px">
+    <div class="row g-0">
+      <div class="col-md-4">
+        <img src="{% static './images/imagem2-responsa.png' %}" class="img-fluid rounded-start" alt="..." />
+      </div>
+      <div class="col-md-8">
+        <div class="card-body">
+          <h5 class="card-title">Preservação de espaços públicos</h5>
+          <p class="card-text">Desde 2001, a Clínica Pega Visão, em parceria com a Prefeitura de São Paulo, é responsável pela preservação e restauração das duas praças próximas à clínica. Uma delas é a Praça Shain Saliby, altura do número 630 da Avenida Sapopemba. A outra é a Praça do Vinho localizado entre o jardim imperador e a Rua Travessa Michel Lalande. Os espaços públicos preservados pela clínica contribuem para a harmonia e a beleza da zona leste da cidade de São Paulo, além de assegurar a presença de espaços verdes em meio às construções da capital.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Convenios -->
+  <div class="container px-4 py-5" id="custom-cards">
+    <h2 class="pb-2 border-bottom text-center">Convênios e Planos de Saúde</h2>
+    <p class="text-center">Na Clínica Pega Visão, prezamos pela conveniência de nossos pacientes, por isso trabalhamos com os principais convênios e seguros de saúde. Clique no botão abaixo e consulte a lista completa dos convênios que aceitamos.</p>
+    <div class="row bg-white">
+      <div class="col-6 col-md-2 p-2">
+        <img src="{% static './images/bradesco_saude.png' %}" class="img-fluid" alt="..." />
+      </div>
+      <div class="col-6 col-md-2 p-2">
+        <img src="{% static './images/itau_porto.png' %}" class="img-fluid" alt="..." />
+      </div>
+      <div class="col-6 col-md-2 p-2">
+        <img src="{% static './images/unimed.png' %}" class="img-fluid" alt="..." />
+      </div>
+      <div class="col-6 col-md-2 p-2">
+        <img src="{% static './images/sulamerica_saude.png' %}" class="img-fluid" alt="..." />
+      </div>
+      <div class="text-center col-6 col-md-2 p-2">
+        <img src="{% static './images/portoseguro.png' %}" class="img-fluid" alt="..." />
+      </div>
+      <div class="text-center col-6 col-md-2 p-2">
+        <img src="{% static './images/unafisco.jpg' %}" class="img-fluid" alt="..." />
+      </div>
+    </div>
+  </div>
+{% endblock %}

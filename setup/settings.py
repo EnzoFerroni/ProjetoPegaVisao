@@ -39,7 +39,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'bootstrap5',
-    'PV',
+    'PV.apps.PvConfig',
 ]
 
 MIDDLEWARE = [

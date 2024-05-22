@@ -1,4 +1,10 @@
 from django.contrib import admin
 from PV.models import Atendimento
 
-admin.site.register(Atendimento)
+class ListandoAtendimentos(admin.ModelAdmin):
+    list_display=("id", "nome", "disponivel")
+    list_display_links=("id", "nome")
+    search_fields = ("nome",)
+    list_editable = ("disponivel",)
+
+admin.site.register(Atendimento, ListandoAtendimentos)

@@ -2,7 +2,7 @@ from django.shortcuts import render, get_object_or_404
 from PV.models import Atendimento
 
 def index(request):
-    atendimento = Atendimento.objects.all()
+    atendimento = Atendimento.objects.filter(disponivel=True)
     return render(request, 'clinica/index.html', {"cards": atendimento})
 
 def sobre(request):

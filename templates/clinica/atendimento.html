@@ -1,24 +1,19 @@
 {% extends 'clinica/base.html' %}
 {% load static %}
 {% block content %}
-{% comment %} <div class="card container ">
-    <img src="" class="card-img-top" style="max-width: 18rem;">
-    
-    <div class="card-body">
-      <h5 class="card-title"></h5>
-      <p class="card-text"></p>
-      <a href="#" class="btn btn-primary">Marcar Consulta</a>
-    </div>
-  </div> {% endcomment %}
   <div class="card mb-3 container-fluid my-5" style="max-width: 1320px">
     <div class="row g-0">
       <div class="col-md-2">
-        <img src="{% static './images/' %}{{atendimento.imagem}}" class="img-fluid rounded-start" alt="..." />
+        {% if atendimento.imagem == '' or atendimento.imagem == null %}
+          <img src="{% static './images/not-found.png' %}" class="img-fluid rounded-start" />
+        {% else %}
+          <img src="{{ atendimento.imagem.url }}" class="img-fluid rounded-start" />
+        {% endif %}
       </div>
       <div class="col-md-8">
         <div class="card-body">
-          <h5 class="card-title">{{atendimento.nome}}</h5>
-          <p class="card-text">{{atendimento.descricao}}</p>
+          <h5 class="card-title">{{ atendimento.nome }}</h5>
+          <p class="card-text">{{ atendimento.descricao }}</p>
           <a href="{% url 'consulta' %}" class="btn btn-primary">Marcar Consulta</a>
         </div>
       </div>

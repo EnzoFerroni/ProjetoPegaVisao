@@ -10,45 +10,23 @@
     <!-- Cards -->
     <div class="gap-3 d-flex flex-wrap">
       {% if cards %}
-      {% for atendimento in cards %}
-      <div class="card p-0" style="max-width: 200px;">
-        <img src="{% static './images/' %}{{atendimento.imagem}}" class="card-img-top card-img-bottom"/>
-        <div class="card-body">
-          <h5 class="card-title">{{atendimento.nome}}</h5>
-          <a href="{% url 'atendimento' atendimento.id %}" class="btn btn-info">Saiba Mais</a>
-        </div>
-      </div>
-      {% endfor %}
+        {% for atendimento in cards %}
+          <div class="card p-0" style="max-width: 200px;">
+            {% if atendimento.imagem == '' or atendimento.imagem == null %}
+              <img src="{% static './images/not-found.png' %}" class="card-img-top card-img-bottom" />
+            {% else %}
+              <img src="{{ atendimento.imagem.url }}" class="card-img-top card-img-bottom" />
+            {% endif %}
+            <div class="card-body">
+              <h5 class="card-title">{{ atendimento.nome }}</h5>
+              <a href="{% url 'atendimento' atendimento.id %}" class="btn btn-info">Saiba Mais</a>
+            </div>
+          </div>
+        {% endfor %}
       {% else %}
+
       {% endif %}
     </div>
-    <br />
-    {% comment %} 
-      <div class="card col p-0" style="width: 18rem">
-        <img src="{% static './images/oftalmologia_geral.jpg' %}" class="card-img-top card-img-bottom" alt="..." />
-        <div class="card-body">
-          <h5 class="card-title">Oftalmologia Geral</h5>
-          <p class="card-text">
-            <a href="#" class="btn btn-info"data-bs-toggle="modal" data-bs-target="#exampleModal">Saiba Mais</a>
-          </p>
-        </div>
-      </div>
-      <div class="card col p-0" style="width: 18rem">
-        <img src="{% static './images/oftalmopediatria.jpg' %}" class="card-img-top card-img-bottom" alt="..." />
-        <div class="card-body">
-          <h5 class="card-title">Oftalmopediatria</h5>
-          <a href="#" class="btn btn-info"data-bs-toggle="modal" data-bs-target="#exampleModal">Saiba Mais</a>
-        </div>
-      </div>
-      <div class="card col p-0" style="width: 18rem">
-        <img src="{% static './images/plastica_ocular.jpg' %}" class="card-img-top card-img-bottom" alt="..." />
-        <div class="card-body">
-          <h5 class="card-title">Plastica Ocular</h5>
-          <a href="#" class="btn btn-info"data-bs-toggle="modal" data-bs-target="#exampleModal">Saiba Mais</a>
-        </div>
-      </div>
-    </div> 
-    {% endcomment %}
   </div>
   <!-- WhatsApp -->
   <div class="card mb-3 container-fluid" style="max-width: 1320px">

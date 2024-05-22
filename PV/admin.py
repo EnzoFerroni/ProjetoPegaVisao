@@ -1,4 +1,4 @@
 from django.contrib import admin
-from PV.models import Atendimentos
+from PV.models import Atendimento
 
-admin.site.register(Atendimentos)
+admin.site.register(Atendimento)

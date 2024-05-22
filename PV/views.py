@@ -1,8 +1,8 @@
-from django.shortcuts import render
-from PV.models import Atendimentos
+from django.shortcuts import render, get_object_or_404
+from PV.models import Atendimento
 
 def index(request):
-    atendimento = Atendimentos.objects.all()
+    atendimento = Atendimento.objects.all()
     return render(request, 'clinica/index.html', {"cards": atendimento})
 
 def sobre(request):
@@ -16,3 +16,7 @@ def logado(request):
 
 def consulta(request):
     return render(request, 'clinica/consulta.html')
+
+def atendimento(request, atendimento_id):
+    atendimento = get_object_or_404(Atendimento, pk=atendimento_id)
+    return render(request, 'clinica/atendimento.html', {"atendimento": atendimento})

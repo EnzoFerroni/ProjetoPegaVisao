@@ -9,18 +9,81 @@
     <p>Nossa experiência e comprometimento profissional aliados a uma ampla área de diagnósticos, procedimentos cirúrgicos e serviços especializados, garantem a cobertura ideal para qualquer tipo de tratamento de saúde ocular.</p>
     <!-- Cards -->
     <div class="row gap-3">
-      {% if cards %}
-      {% for atendimento in cards %}
       <div class="card col p-0" style="width: 18rem">
-        <img src="{% static './images/' %}{{atendimento.imagem}}" class="card-img-top card-img-bottom" alt="..." />
+        <img src="{% static './images/catarata.jpg' %}" class="card-img-top card-img-bottom" alt="..." />
         <div class="card-body">
-          <h5 class="card-title">{{atendimento.nome}}</h5>
-          <a href="#" class="btn btn-info">Saiba Mais</a>
+          <h5 class="card-title">Catarata</h5>
+          <a href="#" class="btn btn-info"data-bs-toggle="modal" data-bs-target="#exampleModal">Saiba Mais</a>
         </div>
       </div>
-      {% endfor %}
-      {% else %}
-      {% endif %}
+      <div class="card col p-0" style="width: 18rem">
+        <img src="{% static './images/ceratocone.jpg' %}" class="card-img-top card-img-bottom" alt="..." />
+        <div class="card-body">
+          <h5 class="card-title">Ceratocone</h5>
+          <a href="#" class="btn btn-info"data-bs-toggle="modal" data-bs-target="#exampleModal">Saiba Mais</a>
+        </div>
+      </div>
+      <div class="card col p-0" style="width: 18rem">
+        <img src="{% static './images/cirurgia_refrativa.jpg' %}" class="card-img-top card-img-bottom" alt="..." />
+        <div class="card-body">
+          <h5 class="card-title">Cirurgia Refrativa</h5>
+          <a href="#" class="btn btn-info"data-bs-toggle="modal" data-bs-target="#exampleModal">Saiba Mais</a>
+        </div>
+      </div>
+      <div class="card col p-0" style="width: 18rem">
+        <img src="{% static './images/cornea_e_conjutiva.jpg' %}" class="card-img-top card-img-bottom" alt="..." />
+        <div class="card-body">
+          <h5 class="card-title">Cornea e Conjutiva</h5>
+          <a href="#" class="btn btn-info"data-bs-toggle="modal" data-bs-target="#exampleModal">Saiba Mais</a>
+        </div>
+      </div>
+      <div class="card col p-0" style="width: 18rem">
+        <img src="{% static './images/glaucoma.jpg' %}" class="card-img-top card-img-bottom" alt="..." />
+        <div class="card-body">
+          <h5 class="card-title">Glaucoma</h5>
+          <a href="#" class="btn btn-info"data-bs-toggle="modal" data-bs-target="#exampleModal">Saiba Mais</a>
+        </div>
+      </div>
+    </div>
+    <br />
+    <div class="row gap-3">
+      <div class="card col p-0" style="width: 18rem">
+        <img src="{% static './images/lente_de_contato.jpg' %}" class="card-img-top card-img-bottom" alt="..." />
+        <div class="card-body">
+          <h5 class="card-title">Lente de Contato</h5>
+          <a href="#" class="btn btn-info"data-bs-toggle="modal" data-bs-target="#exampleModal">Saiba Mais</a>
+        </div>
+      </div>
+      <div class="card col p-0" style="width: 18rem">
+        <img src="{% static './images/lente_intraocular_premium.jpg' %}" class="card-img-top card-img-bottom" alt="..." />
+        <div class="card-body">
+          <h5 class="card-title">Lentes Intraocular</h5>
+          <a href="#" class="btn btn-info"data-bs-toggle="modal" data-bs-target="#exampleModal">Saiba Mais</a>
+        </div>
+      </div>
+      <div class="card col p-0" style="width: 18rem">
+        <img src="{% static './images/oftalmologia_geral.jpg' %}" class="card-img-top card-img-bottom" alt="..." />
+        <div class="card-body">
+          <h5 class="card-title">Oftalmologia Geral</h5>
+          <p class="card-text">
+            <a href="#" class="btn btn-info"data-bs-toggle="modal" data-bs-target="#exampleModal">Saiba Mais</a>
+          </p>
+        </div>
+      </div>
+      <div class="card col p-0" style="width: 18rem">
+        <img src="{% static './images/oftalmopediatria.jpg' %}" class="card-img-top card-img-bottom" alt="..." />
+        <div class="card-body">
+          <h5 class="card-title">Oftalmopediatria</h5>
+          <a href="#" class="btn btn-info"data-bs-toggle="modal" data-bs-target="#exampleModal">Saiba Mais</a>
+        </div>
+      </div>
+      <div class="card col p-0" style="width: 18rem">
+        <img src="{% static './images/plastica_ocular.jpg' %}" class="card-img-top card-img-bottom" alt="..." />
+        <div class="card-body">
+          <h5 class="card-title">Plastica Ocular</h5>
+          <a href="#" class="btn btn-info"data-bs-toggle="modal" data-bs-target="#exampleModal">Saiba Mais</a>
+        </div>
+      </div>
     </div>
   </div>
   <!-- WhatsApp -->

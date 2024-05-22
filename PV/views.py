@@ -10,3 +10,9 @@ def sobre(request):
 
 def cadastro(request):
     return render(request, 'clinica/cadastro.html')
+
+def logado(request):
+    return render(request, 'clinica/logado.html')
+
+def consulta(request):
+    return render(request, 'clinica/consulta.html')

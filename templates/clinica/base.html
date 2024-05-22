@@ -22,7 +22,7 @@
               <a class="text-dark nav-link" aria-current="page" href="{% url 'sobre' %}">Sobre</a>
             </li>
             <li class="nav-item">
-              <a class="text-dark nav-link" href="#">Serviços</a>
+              <a class="text-dark nav-link" href="#"></a>
             </li>
           </ul>
           <button class="btn btn-outline-info" type="button" data-bs-toggle="modal" data-bs-target="#exampleModal">Entre aqui</button>
@@ -50,7 +50,7 @@
                 </div>
                 <div class="modal-footer">
                   <button type="button" class="btn btn-secondary" data-bs-dismiss="modal"><a href="{% url 'cadastro' %}" style="text-decoration: none; color: #FFF;">Registrar-se</a></button>
-                  <button type="button" class="btn btn-info">Login</button>
+                  <button type="button" class="btn btn-info"><a href="{% url 'logado' %}"style="text-decoration: none; color: #FFF;">Login</a></button>
                 </div>
               </div>
             </div>
@@ -97,7 +97,7 @@
 
           <div class="col-md-5 offset-md-1 mb-3">
             <form>
-              <h5>Se inscreva na nossa newsletter!</h5>
+              <h5>Se inscreva para receber noticias da clinica!</h5>
               <p>Receba novidades em primeira mão!</p>
               <div class="d-flex flex-column flex-sm-row w-100 gap-2">
                 <label for="newsletter1" class="visually-hidden">Email Address</label>

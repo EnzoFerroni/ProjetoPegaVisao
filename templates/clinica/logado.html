@@ -1,0 +1,261 @@
+{% load static %}
+{% load static %}
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Clinica Pega Visão</title>
+    <link rel="shortcut icon" href="{% static './images/icone.ico' %}" type="image/x-icon" />
+    {% load bootstrap5 %}
+    {% bootstrap_css %}
+    {% bootstrap_javascript %}
+  </head>
+
+  <body class="bg-light">
+    <!-- Header -->
+    <nav class="navbar navbar-expand-md bg-body-tertiary p-0">
+      <div class="container-fluid text-dark bg-white">
+        <a class="navbar-brand" href="{% url 'index' %}"><img src="{% static './images/logoPV.jpg' %}" alt srcset /></a>
+        <div class="navbar-collapse container" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="text-dark nav-link" aria-current="page" href="{% url 'sobre' %}">Sobre</a>
+            </li>
+            <li class="nav-item">
+              <a class="text-dark nav-link" href="#"></a>
+            </li>
+          </ul>
+          <button class="btn btn-info" type="button" data-bs-toggle="modal" data-bs-target="#exampleModal">Bem-Vindo Enzo!</button>
+          <!-- Modal -->
+          <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h1 class="modal-title fs-5" id="exampleModalLabel">Login</h1>
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                  <div class="mb-3 row">
+                    <label for="inputEmail" class="col-sm-2 col-form-label">Nome: Enzo Ferroni</label>
+                  </div>
+                  <div class="mb-3 row">
+                    <label for="inputPassword" class="col-sm-2 col-form-label">E-mail: enzoferroni@hotmail.com</label>
+
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </nav>
+    <!-- Banner -->
+    <img src="{% static './images/banner1.png' %}" class="img-fluid w-100" alt="..." />
+    <!-- Atendimento -->
+    <div class="container text-center pt-3 pb-3">
+      <h3>Atendimento Oftalmológico</h3>
+      <p>Nossa experiência e comprometimento profissional aliados a uma ampla área de diagnósticos, procedimentos cirúrgicos e serviços especializados, garantem a cobertura ideal para qualquer tipo de tratamento de saúde ocular.</p>
+      <!-- Cards -->
+      <div class="row gap-3">
+        <div class="card col p-0" style="width: 18rem">
+          <img src="{% static './images/catarata.jpg' %}" class="card-img-top card-img-bottom" alt="..." />
+          <div class="card-body">
+            <h5 class="card-title">Catarata</h5>
+            <a href="{% url 'consulta' %}" class="btn btn-info" >Saiba Mais</a>
+          </div>
+        </div>
+        <div class="card col p-0" style="width: 18rem">
+          <img src="{% static './images/ceratocone.jpg' %}" class="card-img-top card-img-bottom" alt="..." />
+          <div class="card-body">
+            <h5 class="card-title">Ceratocone</h5>
+            <a href="{% url 'consulta' %}" class="btn btn-info" >Saiba Mais</a>
+          </div>
+        </div>
+        <div class="card col p-0" style="width: 18rem">
+          <img src="{% static './images/cirurgia_refrativa.jpg' %}" class="card-img-top card-img-bottom" alt="..." />
+          <div class="card-body">
+            <h5 class="card-title">Cirurgia Refrativa</h5>
+            <a href="{% url 'consulta' %}" class="btn btn-info" >Saiba Mais</a>
+          </div>
+        </div>
+        <div class="card col p-0" style="width: 18rem">
+          <img src="{% static './images/cornea_e_conjutiva.jpg' %}" class="card-img-top card-img-bottom" alt="..." />
+          <div class="card-body">
+            <h5 class="card-title">Cornea e Conjutiva</h5>
+            <a href="{% url 'consulta' %}" class="btn btn-info" >Saiba Mais</a>
+          </div>
+        </div>
+        <div class="card col p-0" style="width: 18rem">
+          <img src="{% static './images/glaucoma.jpg' %}" class="card-img-top card-img-bottom" alt="..." />
+          <div class="card-body">
+            <h5 class="card-title">Glaucoma</h5>
+            <a href="{% url 'consulta' %}" class="btn btn-info" >Saiba Mais</a>
+          </div>
+        </div>
+      </div>
+      <br />
+      <div class="row gap-3">
+        <div class="card col p-0" style="width: 18rem">
+          <img src="{% static './images/lente_de_contato.jpg' %}" class="card-img-top card-img-bottom" alt="..." />
+          <div class="card-body">
+            <h5 class="card-title">Lente de Contato</h5>
+            <a href="{% url 'consulta' %}" class="btn btn-info" >Saiba Mais</a>
+          </div>
+        </div>
+        <div class="card col p-0" style="width: 18rem">
+          <img src="{% static './images/lente_intraocular_premium.jpg' %}" class="card-img-top card-img-bottom" alt="..." />
+          <div class="card-body">
+            <h5 class="card-title">Lentes Intraocular</h5>
+            <a href="{% url 'consulta' %}" class="btn btn-info" >Saiba Mais</a>
+          </div>
+        </div>
+        <div class="card col p-0" style="width: 18rem">
+          <img src="{% static './images/oftalmologia_geral.jpg' %}" class="card-img-top card-img-bottom" alt="..." />
+          <div class="card-body">
+            <h5 class="card-title">Oftalmologia Geral</h5>
+            <p class="card-text">
+              <a href="{% url 'consulta' %}" class="btn btn-info" >Saiba Mais</a>
+            </p>
+          </div>
+        </div>
+        <div class="card col p-0" style="width: 18rem">
+          <img src="{% static './images/oftalmopediatria.jpg' %}" class="card-img-top card-img-bottom" alt="..." />
+          <div class="card-body">
+            <h5 class="card-title">Oftalmopediatria</h5>
+            <a href="{% url 'consulta' %}" class="btn btn-info" >Saiba Mais</a>
+          </div>
+        </div>
+        <div class="card col p-0" style="width: 18rem">
+          <img src="{% static './images/plastica_ocular.jpg' %}" class="card-img-top card-img-bottom" alt="..." />
+          <div class="card-body">
+            <h5 class="card-title">Plastica Ocular</h5>
+            <a href="{% url 'consulta' %}" class="btn btn-info" >Saiba Mais</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- WhatsApp -->
+    <div class="card mb-3 container-fluid" style="max-width: 1320px">
+      <div class="row g-0">
+        <div class="col-md-1 pt-3">
+          <img src="{% static './images/icone_consulta.jpg' %}" class="img-fluid rounded-start" alt="..." />
+        </div>
+        <div class="col-md-6">
+          <div class="card-body">
+            <h5 class="card-title">Consulta com um oftalmologista?</h5>
+            <p class="card-text">
+              Caso necessite de atendimento oftalmológico em SP, clique e converse diretamente com nossa equipe via WhatsApp: <br /><br />
+              Segunda a Sexta: 8h – 17hs <br />
+              Sábados: 8h – 12hs <br /><br />
+              Consultas somente com hora marcada Atendimento durante horário comercial
+            </p>
+          </div>
+        </div>
+        <div class="col-md-5 align-self-center">
+          <div class="card-body text-center">
+            <a href="#" class="btn btn-success w-50">
+              <img src="{% static './images/whatsapp.png' %}" class="img-fluid w-25 p-1" />
+              Fale no Whatsapp
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Conheça a clinica -->
+    <div class="card mb-3 container-fluid" style="max-width: 1320px">
+      <div class="row g-0">
+        <div class="col-md-4">
+          <img src="{% static './images/clinica.jpg' %}" class="img-fluid rounded-start" alt="..." />
+        </div>
+        <div class="col-md-8">
+          <div class="card-body">
+            <h5 class="card-title">Conheça nossa clínica de olhos em São Paulo</h5>
+            <p class="card-text">A Clínica Pega Visão atua na área de oftalmologia desde 2023, oferecendo exames, cirurgias e consultas oftalmológicas em São Paulo aliados aos melhores profissionais do Brasil e do mundo.</p>
+            <p class="card-text">
+              <small class="text-body-secondary">Conheça um pouco mais sobre nossa história e trajetória através dos anos.</small>
+            </p>
+            <a href="{% url 'sobre' %}" class="btn btn-info">Sobre nós</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Convenios -->
+    <div class="container px-4 py-5" id="custom-cards">
+      <h2 class="pb-2 border-bottom text-center">Convênios e Planos de Saúde</h2>
+      <p class="text-center">Na Clínica Pega Visão, prezamos pela conveniência de nossos pacientes, por isso trabalhamos com os principais convênios e seguros de saúde. Clique no botão abaixo e consulte a lista completa dos convênios que aceitamos.</p>
+      <div class="row bg-white">
+        <div class="col-6 col-md-2 p-2">
+          <img src="{% static './images/bradesco_saude.png' %}" class="img-fluid" alt="..." />
+        </div>
+        <div class="col-6 col-md-2 p-2">
+          <img src="{% static './images/itau_porto.png' %}" class="img-fluid" alt="..." />
+        </div>
+        <div class="col-6 col-md-2 p-2">
+          <img src="{% static './images/unimed.png' %}" class="img-fluid" alt="..." />
+        </div>
+        <div class="col-6 col-md-2 p-2">
+          <img src="{% static './images/sulamerica_saude.png' %}" class="img-fluid" alt="..." />
+        </div>
+        <div class="text-center col-6 col-md-2 p-2">
+          <img src="{% static './images/portoseguro.png' %}" class="img-fluid" alt="..." />
+        </div>
+        <div class="text-center col-6 col-md-2 p-2">
+          <img src="{% static './images/unafisco.jpg' %}" class="img-fluid" alt="..." />
+        </div>
+      </div>
+    </div>
+    <!-- Footer -->
+    <div class="container">
+      <footer id="footer" class="py-3">
+        <div class="row">
+          <div class="col-6 col-md-2 mb-3">
+            <h5>Nosso Endereço:</h5>
+            <ul class="nav flex-column">
+              <li class="nav-item mb-2">
+                <p class="p-0 m-0 text-body-secondary">
+                  Av. Pega Visão, 011 – Mooca, São Paulo – SP, 00000-000 <br />
+                  CNPJ: 00.000.000/0000-00
+                </p>
+              </li>
+            </ul>
+          </div>
+
+          <div class="col-6 col-md-4 mb-3">
+            <h5>Contatos:</h5>
+            <ul class="nav flex-column">
+              <li class="nav-item mb-2">
+                <p class="p-0 m-0 text-body-secondary">E-mail: cpv@pegavisao.com.br</p>
+              </li>
+              <li class="nav-item mb-2">
+                <p class="p-0 m-0 text-body-secondary">TEL: (00) 0000-0000</p>
+              </li>
+              <li class="nav-item mb-2">
+                <p class="p-0 m-0 text-body-secondary">Fale conosco</p>
+              </li>
+              <li class="nav-item mb-2">
+                <p class="p-0 m-0 text-body-secondary">WhatsApp: (00) 00000-0000</p>
+              </li>
+            </ul>
+          </div>
+
+          <div class="col-md-5 offset-md-1 mb-3">
+            <form>
+              <h5>Se inscreva para receber noticias da clinica!</h5>
+              <p>Receba novidades em primeira mão!</p>
+              <div class="d-flex flex-column flex-sm-row w-100 gap-2">
+                <label for="newsletter1" class="visually-hidden">Email Address</label>
+                <input id="newsletter1" type="text" class="form-control" placeholder="E-mail" />
+                <button class="btn btn-primary" type="button">Confirmar</button>
+              </div>
+            </form>
+          </div>
+        </div>
+
+        <div class="d-flex flex-column flex-sm-row justify-content-between py-4 my-4 border-top">
+          <p class="container text-center">© 2024 - Clínica Pega Visão - Todos os direitos reservados - Desenvolvido por Enzo, Fabio e Leandro</p>
+        </div>
+      </footer>
+    </div>
+  </body>
+</html>

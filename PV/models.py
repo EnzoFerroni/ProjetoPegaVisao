@@ -8,5 +8,5 @@ class Atendimento(models.Model):
 #class Especialidades(models.Model):
     
 def __str__(self):
-    return "Atendimento [nome={self.nome}]"
+    return f"Atendimento [nome={self.nome}]"
 

@@ -8,10 +8,10 @@
     <h3>Atendimento Oftalmológico</h3>
     <p>Nossa experiência e comprometimento profissional aliados a uma ampla área de diagnósticos, procedimentos cirúrgicos e serviços especializados, garantem a cobertura ideal para qualquer tipo de tratamento de saúde ocular.</p>
     <!-- Cards -->
-    <div class="row gap-3">
+    <div class="gap-3 d-flex flex-wrap">
       {% if cards %}
       {% for atendimento in cards %}
-      <div class="card col p-0" style="max-width: 200px">
+      <div class="card p-0" style="max-width: 200px;">
         <img src="{% static './images/' %}{{atendimento.imagem}}" class="card-img-top card-img-bottom"/>
         <div class="card-body">
           <h5 class="card-title">{{atendimento.nome}}</h5>

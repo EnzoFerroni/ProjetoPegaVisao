@@ -1,0 +1,51 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login</title>
+    <link rel="shortcut icon" href="{% static './images/icone.ico' %}" type="image/x-icon" />
+    {% load bootstrap5 %}
+    {% bootstrap_css %}
+    {% bootstrap_javascript %}
+  </head>
+  <body class="bg-body-tertiary">
+    <div class="container">
+      <main>
+        <div class="py-5 text-center">
+          <img class="d-block mx-auto mb-4 w-25 h-25" src="{% static './images/logo_footer.jpg' %}" alt="" />
+          <h2>Formulário de Login</h2>
+        </div>
+        <div class="col-md-12 col-lg-12">
+          <h4 class="mb-3">Perfil</h4>
+          <form action="{% url 'index' %}" method="POST">
+            {% csrf_token %}
+            <div class="row g-3">
+              {% for field in form.visible_fields %}
+                <div class="col-sm-12">
+                  <label for="{{ field.id_for_label }}">{{ field.label }}</label>
+                  {{ field }}
+                </div>
+              {% endfor %}
+            </div>
+            <div class="text-center">
+              <button type="submit" class="my-5 btn btn-success">Login</button>
+            </div>
+
+            <hr class="my-4" />
+          </form>
+        </div>
+      </main>
+
+      <footer class="my-5 pt-5 text-body-secondary text-center text-small">
+        <p class="mb-1">© 2024 - Clínica Pega Visão - Todos os direitos reservados - Desenvolvido por Enzo, Fabio e Leandro</p>
+        <ul class="list-inline">
+          <li class="list-inline-item">
+            <a href="{% url 'index' %}">Sair</a>
+          </li>
+        </ul>
+      </footer>
+    </div>
+  </body>
+</html>

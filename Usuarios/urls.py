@@ -1,9 +1,9 @@
 from django.urls import path
-from Usuarios.views import cadastro2
+from Usuarios.views import cadastro, login
 from PV.views import index
 
 urlpatterns = [
-     path('cadastro2/', cadastro2, name='cadastro2'),
+     path('cadastro/', cadastro, name='cadastro'),
+     path('login/', login, name='login'),
      path('index/', index, name='index'),
-
 ]

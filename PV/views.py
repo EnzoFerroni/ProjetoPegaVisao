@@ -1,6 +1,7 @@
-from django.shortcuts import render, get_object_or_404
+from django.shortcuts import render, get_object_or_404, redirect
 from PV.models import Atendimento
 from Usuarios.forms import LoginForms
+from django.contrib import messages
 
 def index(request):
     form = LoginForms()
@@ -12,6 +13,9 @@ def sobre(request):
     return render(request, 'clinica/sobre.html', {'form':form})
 
 def consulta(request):
+    if not request.user.is_authenticated:
+        messages.error(request, "Faça login ou realize o cadastro antes de marcar uma consulta!")
+        return redirect ('index')
     form = LoginForms()
     return render(request, 'clinica/consulta.html', {'form':form})
 

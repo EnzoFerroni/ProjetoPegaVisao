@@ -14,7 +14,12 @@
     <div class="container">
       <main>
         <div class="py-5 text-center">
-          <img class="d-block mx-auto mb-4 w-25 h-25" src="{% static './images/logo_footer.jpg' %}" alt="" />
+          <img class="d-block mx-auto mb-4 w-25 h-25" src="{% static './images/logo_footer.jpg' %}"/>
+          {% for message in messages %}
+          <div class="alert alert-primary">
+           <p id="messages">{{message}}</p>
+          </div>
+          {% endfor %}
           <h2>Formulário de Cadastro</h2>
         </div>
         <div>

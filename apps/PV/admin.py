@@ -1,5 +1,5 @@
 from django.contrib import admin
-from PV.models import Atendimento
+from apps.PV.models import Atendimento
 
 class ListandoAtendimentos(admin.ModelAdmin):
     list_display=("id", "nome", "disponivel")

@@ -1,3 +1,4 @@
+from typing import Any
 from django import forms
 
 #FORMULARIO DE LOGIN
@@ -80,3 +81,13 @@ class CadastroForms(forms.Form):
             }           
         )
     )
+            
+    # def clean_senha_cadastro_confirmacao(self):
+    #     senha_cadastro = self.cleaned_data.get("senha_cadastro")
+    #     senha_cadastro_confirmacao = self.cleaned_data.get("senha_cadastro_confirmacao")
+        
+    #     if senha_cadastro and senha_cadastro_confirmacao:
+    #         if senha_cadastro != senha_cadastro_confirmacao:
+    #             raise forms.ValidationError("Senhas não são iguais")
+    #         else:
+    #             return senha_cadastro_confirmacao

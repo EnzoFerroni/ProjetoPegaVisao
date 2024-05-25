@@ -1,6 +1,6 @@
 from django.urls import path
-from PV.views import index, sobre, consulta, atendimento
-from Usuarios.views import cadastro
+from apps.PV.views import index, sobre, consulta, atendimento
+from apps.Usuarios.views import cadastro
 
 urlpatterns = [
     path('', index, name='index'),

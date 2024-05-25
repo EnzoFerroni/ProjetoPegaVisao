@@ -1,6 +1,6 @@
 from django.shortcuts import render, get_object_or_404, redirect
-from PV.models import Atendimento
-from Usuarios.forms import LoginForms
+from apps.PV.models import Atendimento
+from apps.Usuarios.forms import LoginForms
 from django.contrib import messages
 
 def index(request):

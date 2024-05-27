@@ -12,14 +12,21 @@ def sobre(request):
     form = LoginForms()
     return render(request, 'clinica/sobre.html', {'form':form})
 
-def consulta(request):
+
+def atendimento(request, atendimento_id):
+    form = LoginForms()
+    atendimento = get_object_or_404(Atendimento, pk=atendimento_id)
+    return render(request, 'clinica/atendimento.html', {"atendimento": atendimento, 'form':form})
+
+def nova_consulta(request):
     if not request.user.is_authenticated:
         messages.error(request, "Faça login ou realize o cadastro antes de marcar uma consulta!")
         return redirect ('index')
     form = LoginForms()
     return render(request, 'clinica/consulta.html', {'form':form})
 
-def atendimento(request, atendimento_id):
-    form = LoginForms()
-    atendimento = get_object_or_404(Atendimento, pk=atendimento_id)
-    return render(request, 'clinica/atendimento.html', {"atendimento": atendimento, 'form':form})
+def editar_consulta(request):
+    pass
+
+def deletar_consulta(request):
+    pass

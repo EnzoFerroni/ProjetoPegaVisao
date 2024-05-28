@@ -2,6 +2,7 @@ from django.shortcuts import render, get_object_or_404, redirect
 from apps.PV.models import Atendimento
 from apps.Usuarios.forms import LoginForms
 from django.contrib import messages
+from apps.PV.forms import ConsultaForms
 
 def index(request):
     form = LoginForms()
@@ -22,7 +23,7 @@ def nova_consulta(request):
     if not request.user.is_authenticated:
         messages.error(request, "Faça login ou realize o cadastro antes de marcar uma consulta!")
         return redirect ('index')
-    form = LoginForms()
+    form = ConsultaForms()
     return render(request, 'clinica/consulta.html', {'form':form})
 
 def editar_consulta(request):

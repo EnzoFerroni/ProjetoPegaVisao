@@ -25,7 +25,7 @@
         <div>
           <div class="col-md-12 col-lg-12">
             <h4 class="mb-3">Preencha o formulário para marcar a consulta!</h4>
-            <form action="{% url 'cadastro' %}" method="POST">
+            <form action="{% url 'nova_consulta' %}" method="POST">
               {% csrf_token %}
               <p>Nome: {{ user.get_username }}</p>
               <div class="row g-3">

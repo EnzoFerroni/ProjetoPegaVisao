@@ -1,6 +1,6 @@
 from django.urls import path
 from apps.PV.views import\
-    index, sobre, atendimento, nova_consulta, editar_consulta, deletar_consulta
+    index, sobre, atendimento, nova_consulta, editar_consulta, deletar_consulta, marcadas
 from apps.Usuarios.views import cadastro
 
 urlpatterns = [
@@ -11,5 +11,7 @@ urlpatterns = [
     path('nova-consulta/', nova_consulta, name='nova_consulta'),
     path('editar-consulta/', editar_consulta, name='editar_consulta'),
     path('deletar-consulta/', deletar_consulta, name='deletar_consulta'),
+    path('marcadas/', marcadas, name='marcadas'),
+
 
 ]

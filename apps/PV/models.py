@@ -1,6 +1,9 @@
+from datetime import datetime
 from django.db import models
 from django.contrib.auth.models import User
-from datetime import datetime
+from django.conf import settings
+
+
 
 class Atendimento(models.Model):
     nome = models.CharField(max_length=100, null=False, blank=False)
@@ -8,7 +11,7 @@ class Atendimento(models.Model):
     descricao = models.TextField(null=False, blank=False, default='')
     disponivel = models.BooleanField(default=False)    
         
-class Consulta(models.Model):
+class Consultas(models.Model):
     
     OPCOES_DOUTOR = [
         ("ENZO", "Enzo"),
@@ -30,14 +33,9 @@ class Consulta(models.Model):
         ("PLASTICA OCULAR", "Plastica Ocular"),
     ]
     
-    nome = models.ForeignKey(
-        to=User,
-        on_delete=models.SET_NULL,
-        null=True,
-        blank=False,
-        related_name='user'
-    )
-    doutor = models.CharField(max_length=100, choices=OPCOES_DOUTOR, default="QUALQUER UM")
-    consulta = models.CharField(max_length=100, choices=OPCOES_CONSULTA)
-    data_consulta = models.DateTimeField(default=datetime.now, blank=False)
+    doutor = models.CharField(max_length=100, choices=OPCOES_DOUTOR, default='QUALQUER UM')
+    consulta = models.CharField(max_length=100, choices=OPCOES_CONSULTA, default='')
     descricao = models.TextField(null=True, blank=True)
+    status = models.BooleanField(default=True)
+    data = models.DateTimeField(default=datetime.now, blank=False)
+    usuario = models.ForeignKey(settings.AUTH_USER_MODEL, on_delete=models.CASCADE)

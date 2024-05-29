@@ -1,0 +1,16 @@
+{% extends 'clinica/base.html' %}
+{% load static %}
+{% block content %}
+{% if cards %}
+        {% for atendimento in cards %}
+          <div class="card p-0" style="max-width: 200px;">
+            <div class="card-body">
+              <h5 class="card-title">{{ consulta.consulta }}</h5>
+              <a href="{% url 'atendimento' atendimento.id %}" class="btn btn-info">Saiba Mais</a>
+            </div>
+          </div>
+        {% endfor %}
+      {% else %}
+
+      {% endif %}
+{% endblock %}

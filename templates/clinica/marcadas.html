@@ -1,16 +1,23 @@
 {% extends 'clinica/base.html' %}
 {% load static %}
 {% block content %}
-{% if cards %}
-        {% for atendimento in cards %}
-          <div class="card p-0" style="max-width: 200px;">
-            <div class="card-body">
-              <h5 class="card-title">{{ consulta.consulta }}</h5>
-              <a href="{% url 'atendimento' atendimento.id %}" class="btn btn-info">Saiba Mais</a>
-            </div>
+  <div class="gap-3 container d-flex flex-wrap  py-3">
+    {% if cards %}
+      {% for consulta in cards %}
+        <div class="card" style="width: 400px;">
+          <div class="card-body">
+            <h5 class="card-title">{{ consulta.usuario }}</h5>
+            <p class="card-text">Consulta: {{ consulta.consulta }}</p>
           </div>
-        {% endfor %}
-      {% else %}
+          <ul class="list-group list-group-flush">
+            <li class="list-group-item">Doutor: {{ consulta.doutor }}</li>
+            <li class="list-group-item">Data e hora: {{ consulta.data }}</li>
+            <li class="list-group-item">Descrição: {{ consulta.descricao }}</li>
+          </ul>
+        </div>
+      {% endfor %}
+    {% else %}
 
-      {% endif %}
+    {% endif %}
+  </div>
 {% endblock %}

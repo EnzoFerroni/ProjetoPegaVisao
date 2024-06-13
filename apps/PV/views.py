@@ -36,6 +36,7 @@ def nova_consulta(request):
     else:
         form = ConsultaForm()
     return render(request, 'clinica/consulta.html', {'form': form})
+
 def editar_consulta(request):
     pass
 

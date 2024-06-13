@@ -44,11 +44,12 @@ def deletar_consulta(request):
     pass
 
 def marcadas(request):
+    form = LoginForms()
     if not request.user.is_authenticated:
         messages.error(request, "Faça login ou realize o cadastro antes de visualizar suas consultas!")
         return redirect ('index')
     
     user = request.user  
     consultas = Consultas.objects.filter(usuario=user)
-    return render(request, 'clinica/marcadas.html', {"cards": consultas})
+    return render(request, 'clinica/marcadas.html', {"cards": consultas,'form':form})
 

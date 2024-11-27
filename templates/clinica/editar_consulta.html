@@ -4,7 +4,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Marcar Consulta</title>
+    <title>Editar Consulta</title>
     <link rel="shortcut icon" href="{% static './images/icone.ico' %}" type="image/x-icon" />
     {% load bootstrap5 %}
     {% bootstrap_css %}
@@ -20,12 +20,12 @@
            <p id="messages">{{message}}</p>
           </div>
           {% endfor %}
-          <h2>Marcar Consulta</h2>
+          <h2>Editar Consulta</h2>
         </div>
         <div>
           <div class="col-md-12 col-lg-12">
-            <h4 class="mb-3">Preencha o formulário para marcar a consulta!</h4>
-            <form action="{% url 'nova_consulta' %}" method="POST">
+            <h4 class="mb-3">Preencha o formulário para editar a consulta!</h4>
+            <form action="{% url 'editar_consulta' consulta_id %}" method="POST">
               {% csrf_token %}
               <p>Nome: {{ user.get_username }}</p>
               <div class="row g-3">
@@ -37,7 +37,7 @@
                 {% endfor %}
               </div>
               <div class="text-center">
-                <button type="submit" class="btn btn-success" style="margin-top: 5%;">Marcar Consulta</button>
+                <button type="submit" class="btn btn-success" style="margin-top: 5%;">Editar Consulta</button>
               </div>
 
               <hr class="my-4" />

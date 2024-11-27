@@ -37,11 +37,24 @@ def nova_consulta(request):
         form = ConsultaForm()
     return render(request, 'clinica/consulta.html', {'form': form})
 
-def editar_consulta(request):
-    pass
+def editar_consulta(request, consulta_id):
+    consulta = Consultas.objects.get(id=consulta_id)
+    form = ConsultaForm(instance=consulta)
+    
+    if request.method == 'POST':
+        form = ConsultaForm(request.POST, instance=consulta)
+        if form.is_valid():
+            form.save()
+            messages.success(request, "Consulta editada com sucesso!")
+            return redirect('marcadas')
+    
+    return render(request, 'clinica/editar_consulta.html', {'form': form, 'consulta_id': consulta_id})
 
-def deletar_consulta(request):
-    pass
+def deletar_consulta(request, consulta_id):
+    consulta = Consultas.objects.get(id=consulta_id)
+    consulta.delete()
+    messages.success(request, "Consulta deletada com sucesso!")
+    return redirect('marcadas')
 
 def marcadas(request):
     form = LoginForms()
